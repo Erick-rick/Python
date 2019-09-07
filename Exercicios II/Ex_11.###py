@@ -1,0 +1,14 @@
+print ('***Codigo de livros****')
+
+CL = input('Digite o codigo do livro :')
+A = ficcao
+B = nficcao
+C = invalido
+
+if (A) :
+    print('Livro de ficcao')
+elif CL == B:
+    print('Livro de nao-ficcao')
+elif CL != A and CL != B:
+    print('Codigo invalido')
+
