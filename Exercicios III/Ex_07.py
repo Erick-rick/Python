@@ -1,10 +1,10 @@
 
-fat = 0 
-cont =1
+n = int(input('Digite o valor de N : \n'))
+fat = 1 
+cont =2
 
-while (cont < 2):
-    num = int(input('Digite um numero :\n'))
-
-    for n in num:
-        fat = fat * num
-    
+while (cont <= n):
+        fat = fat * cont
+        cont =+ 1 
+        #cont = cont + 1
+print('O valor de %d == '%n, fat)  
