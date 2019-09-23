@@ -1,12 +1,9 @@
 print ('--Valor do produto com desconto -- ')
 
-pr = float(input('Digite o valor do produto : '))
+preco= float(input('Digite o valor do produto : '))
 
-desc = float(input('Digite o valor do desconto do produto :'))
+precof = float(input('Digite o valor do desconto do produto :'))
 
-pag = (pr * desc /100)
+desc = (preco - precof)
 
-precof = pr -(pr * desc /100)
-
-
-print('O preço do produto é {}\ncom {}% de desconto {}\ntotal : {}'.format(pr, desc, pag, precof))
+print('Desconto de {} % '.format(desc))
