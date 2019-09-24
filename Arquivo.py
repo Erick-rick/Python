@@ -25,3 +25,11 @@ arquivo.read()
 for linha in arquivo:
     print(linha)
 
+arquivo = open('texto.txt', 'r')
+palavra = []
+
+for linha in arquivo:
+    linha = linha.strip()
+    palavra.append(linha)
+
+arquivo.close()
