@@ -32,3 +32,10 @@ notas['notas'].min()
 #com varias medidas estaticas basicas
 notas.describe()
 
+#media
+media = (1 + 3 + 3 +7 )/ 4
+print (media)
+#media (1000 + 3000 + 3000 + 700000)/4
+
+#mediana 
+#divide 50% esq / 50%dir
