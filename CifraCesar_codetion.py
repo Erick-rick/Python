@@ -1,7 +1,9 @@
 import requests
+import json
 
-r = request.get('https://api.codenation.dev/v1/challenge/dev-ps/generate-data?token=aaffd4776bf1eb6b3003b92c9a98ff2d5b129218')
-print(r.response.content)
+
+r = requests.get('https://api.codenation.dev/v1/challenge/dev-ps/generate-data?token=aaffd4776bf1eb6b3003b92c9a98ff2d5b129218')
+print(r.content)
 
 alfabeto = "abcdefghijklmnopqrstuvwxyz"
 
