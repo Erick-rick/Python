@@ -1,35 +1,38 @@
-import sys #Função do sistema
-import string 
+#uma lista de letras para criptografar
+alfabeto = "abcdefghijklmnopqrstuvwxyz"
 
-texto = input('Digite a mesagem a ser criptografada ou descifrada: ')
-texto = texto.upper()
+#capture a mensagem do usuário
+mensagem = input("Por favor, entre com a mensagem a ser criptografada: ").lower()
 
-chave = int(input('Digite o valor da chave/deslocamento: '))
+#esta variável armazenará a mensagem criptografada
+mensagemCriptografada = ""
 
-modo = input('Escolha E para encriptar ou  D para decriptar :')
+#capture a chave secreta
+chave = input("Por favor, entre a chave: ")
+#Esta ação é necessária porque o programa não lê o valor da chave como número
+chave = int (chave)
 
-CARACTERES= 'ABCDEFGHIJKLMNOPQRSTUVXWYZ'
+#percorra cada caracter na mensagem
+for char in mensagem:
 
-convertido = ''
+    if char in alfabeto:
 
-for caractere in texto:
-    if caractere in CARACTERES:
-        num =CARACTERES.find(caractere)
-    if modo == 'E':
-        num = num + chave
-    elif modo == 'D':
-        num = num - chave
+        #encontre a posição de caracter em alfabeto
+        #por exemplo, 'a' está na posição 0, 'e' está na posição 4, etc.
+        posicao = alfabeto.find(char)
 
-    if num >= len(CARACTERES):
-        num = num - len(CARACTERES)
-    elif num < 0 :
-        num = num + len(CARACTERES)
-        convertido = convertido + CARACTERES[num]
+        #some a chave secreta para encontrar a posição do caracter criptografado 
+        #% 26 significa 'volte para 0 quando você atingir 26'
+        novaPosicao = (posicao + chave) % 26
+
+        #acrescente a letra descriptografada à mensagem
+        #a letra criptografada está em alfabeto na novaPosicao
+        mensagemCriptografada = mensagemCriptografada + alfabeto[novaPosicao]
+
     else:
-        convertido = convertido + caractere
-    
-    if modo == 'E':
-        print ('O texto criptografado é ', convertido)
-    
-    if modo == 'D':
-        print ('O texto descriptado é ', convertido)
+
+        #alguns caracteres (por exemplo '£', '?') não estão no alfabeto, 
+        # então simplesmente adicione a letra criptografada à mensagem
+        mensagemCriptografada = mensagemCriptografada + char
+
+print("Sua mensagem criptografada é:" , mensagemCriptografada)

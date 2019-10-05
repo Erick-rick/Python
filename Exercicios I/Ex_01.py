@@ -6,7 +6,5 @@ C = int(input('Digite o comprimento da área>>> :'))
 
 area = L * C
 
-####
-g
 
 print ('O tamanho da área é : {} M².'.format(area))
