@@ -1,6 +1,8 @@
 from chatterbot.treiners import ListTrainer
 
 from chatterbot import ChatBot
+from chatterbot import corpus
+
 
 bot = ChatBot('T bot')
 
