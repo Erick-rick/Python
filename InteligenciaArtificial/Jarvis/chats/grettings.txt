@@ -1,0 +1,12 @@
+ola!
+bom dia!
+boa tarde
+como vc está?
+bem e você
+o que você está fazendo?
+nada e vc?
+muito bom 
+
+
+/*Speech Recognition - reconhecimento de fala
+*/
