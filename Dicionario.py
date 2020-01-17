@@ -21,4 +21,10 @@ pessoa.keys()
 
 pessoa.values()
 
+#Criar um dicionário
+mylist = ["a", "b", "a", "c", "c"]
+#Converter em uma lista
+mylist = list( dict.fromkeys(mylist) )
+#Imprimir a lista
+print(mylist)
 
