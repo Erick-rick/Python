@@ -24,7 +24,7 @@ class Brower(object):
         self.view.show()
         
         #Conectando os sinais do webkit
-        self.view.connect(("load-committed", self.check_buttons) 
+        self.view.connect("load-committed", self.check_buttons)
         self.view.connect("title-changed", self.change_title)
 
         #Conectando os sinais do Gtk
@@ -53,8 +53,8 @@ class Brower(object):
         self.go_(self)
     
     def check_buttons(self, widget, data):
-        '''Verifica se os botões voltar, avançar estão disponíveis, em caso verdadeiro os botões podem ser utilizados caso contrário os botões são desativados.
-           Também atualiza a barra de endereços com a página atualmente carregada'''
+        #Verifica se os botões voltar, avançar estão disponíveis, em caso verdadeiro os botões podem ser utilizados caso contrário os botões são desativados.
+         #  Também atualiza a barra de endereços com a página atualmente carregada
            uri = widget.get_main_frame().get_uri()
            self.url.set_text(uri)
            self.go_back_button.set_sensitive(self.view.can_go_forward())

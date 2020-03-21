@@ -29,8 +29,8 @@ class Bird(pygame.sprite.Sprite):
 pygame.init()
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
-BACKGROUND = pygame.image.load('img/background-night')
-BACKGROUND - pygame.tranform.scale(BACKGROUND,(SCREEN_WIDTH, SCREEN_HEIGHT))
+BACKGROUND = pygame.image.load('img/background-night.png')
+#BACKGROUND - pygame.tranform.scale(BACKGROUND,(SCREEN_WIDTH, SCREEN_HEIGHT))
 
 bird_group = pygame.sprite.Group()
 bird =Bird()
