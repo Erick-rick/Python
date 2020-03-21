@@ -9,4 +9,3 @@ filmes.columns = ('filmeId', 'titulo', 'generos')
 filmes.head()
 
 media =(1000 + 3000 + 3000 + 700000)/4
-media = 
